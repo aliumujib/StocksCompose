@@ -39,13 +39,15 @@ fine suite of operators that make it a robust solution.
 #### Domain
 
 The domain layer contains the app business logic. It defines contracts for data operations and
-domain models to be used in the app. All other layers have their own representation of these domain
-models, and Mapper classes (or adapters) are used to transform the domain models to each layer's
-domain model representation. Usecases which represent a single unit of business logic are also
+domain models to be used in the app. Usecases which represent a single unit of business logic are also
 defined in the domain layer, and are consumed by the presentation layer.
 
 Writing mappers and models can take a lot of effort and result in boilerplate, but they make the
 codebase much more maintainable and robust by separating concerns.
+
+The domain layer in this project is split between two modules:
+- stock-data-lib
+- core-models
 
 ## Testing
 

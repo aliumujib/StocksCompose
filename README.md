@@ -12,7 +12,7 @@ To build this project, you require:
 - Kotlin 1.6.10
 - Android Gradle Plugin 7.1.2
 
-## Design
+## Architecture
 
 In approaching this project, I focused on the architecture of the data layer. I leveraged retrofit
 and Kotlin coroutines to fetch data from the APIs and used an enum to switch between the different
@@ -20,8 +20,6 @@ APIs simulating the Success, Empty and Error states.
 
 On the UI I used Jetpack Compose + ViewModels to build a unidirectional flow of data from the UI to
 the data source and back.
-
-## Architecture
 
 The application follows clean architecture in order to take advantage of its inherent benefits such
 as scalability, maintainability and testability. It enforces separation of concerns and dependency

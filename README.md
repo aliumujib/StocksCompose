@@ -23,7 +23,7 @@ The application follows clean architecture in order to take advantage of its inh
 scalability, maintainability and testability. It enforces separation of concerns and dependency
 inversion, where higher and lower level layers all depend on abstractions.
 
-####Data
+#### Data
 I broke the data layer into 2 modules:
 
 - Remote - a module that encapsulates the network calls and exposes a class `StocksDataSource` that

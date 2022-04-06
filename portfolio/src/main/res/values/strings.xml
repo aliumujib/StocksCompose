@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="portfolio_app_bar_title">My portfolio</string>
+    <string name="portfolio_no_data_to_display">No data to display</string>
+    <string name="portfolio_error_message">An error occurred, retry later: %1$s</string>
+</resources>

@@ -13,7 +13,7 @@ import kotlinx.coroutines.test.TestResult
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
-public class PortfolioListViewModelTest {
+internal class PortfolioListViewModelTest {
 
     private val repository: StockRepository = FakeStocksRepository()
     private val testDispatcher = StandardTestAsyncDispatcher()
@@ -21,7 +21,7 @@ public class PortfolioListViewModelTest {
     private val sut = PortfolioListViewModel(fetchStocks)
 
     @Test
-    public fun state_is_success_when_response_contains_data_and_there_is_no_error(): TestResult = runTest{
+    internal fun state_is_success_when_response_contains_data_and_there_is_no_error(): TestResult = runTest{
        launch { // https://github.com/cashapp/turbine/issues/33#issuecomment-846041146
            //GIVEN
            val expected = PortfolioViewState.Success(listOf(Utils.MICROSOFT, Utils.APPLE))
@@ -39,7 +39,7 @@ public class PortfolioListViewModelTest {
     }
 
     @Test
-    public fun state_is_success_when_response_contains_no_data_and_there_is_no_error(): TestResult = runTest{
+    internal fun state_is_success_when_response_contains_no_data_and_there_is_no_error(): TestResult = runTest{
         launch {
             //GIVEN
             val expected = PortfolioViewState.Success(listOf())
@@ -57,7 +57,7 @@ public class PortfolioListViewModelTest {
     }
 
     @Test
-    public fun state_is_error_when_response_contains_no_data_and_there_is_an_error(): TestResult = runTest{
+    internal fun state_is_error_when_response_contains_no_data_and_there_is_an_error(): TestResult = runTest{
         launch {
             //GIVEN
             val expected = PortfolioViewState.Error("Bad JSON")

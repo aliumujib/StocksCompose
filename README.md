@@ -1,6 +1,6 @@
 # StockPortfolio
 
-Android project that consumes data from a websocket. Built with MVVM, Kotlin Flow, Clean
+Android project that consumes data from a json API. Built with MVVM, Kotlin Flow, Clean
 architecture.
 
 ## Prerequisite

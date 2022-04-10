@@ -62,7 +62,11 @@ internal fun Portfolio(viewModel: PortfolioListViewModel) {
 
 @Composable
 internal fun ResponseTypeSelector(responseType: ResponseType, onClick: (ResponseType) -> Unit) {
-    val items = listOf("Success", "Empty", "Error")
+    val items = listOf(
+        stringResource(id = R.string.portfolio_success_btn_title),
+        stringResource(id = R.string.portfolio_empty_btn_title),
+        stringResource(id = R.string.portfolio_failure_btn_title)
+    )
     ToggleButtonGroup(responseType.value, items) {
         onClick(ResponseType.fromValue(it))
     }

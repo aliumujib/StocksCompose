@@ -3,4 +3,7 @@
     <string name="portfolio_app_bar_title">My portfolio</string>
     <string name="portfolio_no_data_to_display">No data to display</string>
     <string name="portfolio_error_message">An error occurred, retry later: %1$s</string>
+    <string name="portfolio_success_btn_title">Success</string>
+    <string name="portfolio_empty_btn_title">Failure</string>
+    <string name="portfolio_failure_btn_title">Error</string>
 </resources>

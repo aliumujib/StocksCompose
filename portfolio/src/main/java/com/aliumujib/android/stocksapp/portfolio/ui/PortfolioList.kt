@@ -68,8 +68,12 @@ internal fun ResponseTypeSelector(responseType: ResponseType, onClick: (Response
         stringResource(id = R.string.portfolio_failure_btn_title)
     )
     ToggleButtonGroup(responseType.value, items) {
-        onClick(ResponseType.fromValue(it))
+        onClick(mapButtonIndexToResponseType(it))
     }
+}
+
+internal fun mapButtonIndexToResponseType(buttonIndex: Int): ResponseType {
+    return ResponseType.fromValue(buttonIndex)
 }
 
 @Composable
